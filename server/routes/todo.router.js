@@ -4,7 +4,7 @@ const pool = require('../modules/pool.js');
 
 // GET
 router.get('/', (req, res) => {
-  let queryText = 'SELECT * FROM "tasks";';
+  let queryText = `SELECT * FROM "tasks";`;
   pool
     .query(queryText)
     .then((result) => {
@@ -37,7 +37,7 @@ router.put('/:id', (req, res) => {
   console.log('req.body', req.body);
   console.log('req.params', req.params);
   let queryText = `
-  UPDATE "tasks" SET "taskName" = $1
+  UPDATE "tasks" SET "isCompleted" = NOT "isCompleted"
   WHERE "id" = $2;
   `;
   pool
