@@ -11,6 +11,8 @@ app.use(express.static('build'));
 app.use('/api/todo', todoRouter);
 
 /** ---------- START SERVER ---------- **/
-app.listen(PORT,  () => {
-    console.log('Listening on port: ', PORT);
+app.listen(PORT, () => {
+  console.log('Listening on port: ', PORT);
 });
+
+module.exports = app;
