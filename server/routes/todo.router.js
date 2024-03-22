@@ -38,10 +38,10 @@ router.put('/:id', (req, res) => {
   console.log('req.params', req.params);
   let queryText = `
   UPDATE "tasks" SET "isCompleted" = NOT "isCompleted"
-  WHERE "id" = $2;
+  WHERE "id" = $1;
   `;
   pool
-    .query(queryText, [req.body.taskName, req.params.id])
+    .query(queryText, [req.params.id])
     .then(() => {
       res.sendStatus(200);
     })
