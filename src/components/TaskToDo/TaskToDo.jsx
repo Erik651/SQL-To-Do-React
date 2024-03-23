@@ -51,7 +51,7 @@ function TaskToDo() {
 
         <button type="submit">Submit New Task</button>
       </form>
-      <p>Please complete the following task ${addTask}</p>
+      <p>Click Submit New Task to add, "{taskToDoTaskName}" to Task To DO List</p>
       <ul>
         {taskToDoArray.map((task) => {
           return <li key={task.id}>{task.taskName}</li>;
@@ -60,3 +60,5 @@ function TaskToDo() {
     </section>
   );
 }
+
+export default TaskToDo;

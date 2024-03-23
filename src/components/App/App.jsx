@@ -1,13 +1,14 @@
-import {useState} from 'react';
+import { useState } from 'react';
+import TaskToDo from '../TaskToDo/TaskToDo';
+import './App.css';
 
-function App () {
-  
+function App() {
   return (
-    <div>
+    <div className="App">
       <h1>TO DO APP</h1>
+      <TaskToDo />
     </div>
   );
-
 }
 
-export default App
+export default App;
